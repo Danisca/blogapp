@@ -1,0 +1,16 @@
+<h1>Showing</h1>
+<p>
+	<%=@article.title%>
+</p>
+<p>
+	<%=@article.text%>
+</p>
+<!--listing all comments of the current article -->
+<h3>Comments</h3>
+<%=render @article.comments%>
+<!--Displaying the form for add new comments to the current article -->
+<h3>Add a comment:</h3>
+<%=render 'comments/form'%>
+<!-- you should not to add controller: controller_name if are in the self controller-->
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%=link_to "Back", articles_path%>
